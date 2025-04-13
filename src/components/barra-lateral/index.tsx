@@ -14,12 +14,11 @@ width: 212px;
 
 
 const BarraLateral = () => {
-    const [selecionado, setSelecionado] = useState<Item>()
 
     const opcoes: Item[] = [
         {
             id: 0, 
-            conteudo:"Home",
+            conteudo:"Inicio",
             iconeAtivo: "imagens/assets/Desktop/icones/Home - ativo.png", 
             iconeInativo: "imagens/assets/Desktop/icones/Home - inativo.png",
         },
@@ -48,6 +47,9 @@ const BarraLateral = () => {
             iconeInativo: "imagens/assets/Desktop/icones/Surpreenda-me - inativo.png",
         },
     ];
+
+    const [selecionado, setSelecionado] = useState<Item>(opcoes[0])
+
 
     return (
         <aside>

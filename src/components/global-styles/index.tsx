@@ -1,6 +1,19 @@
 import { createGlobalStyle } from "styled-components";
 
+import GhandSansRegular from "/fonts/GandhiSans-Regular.otf"
+import GhandSansBold from "/fonts/GandhiSans-Bold.otf"
+
 export const GlobalStyles = createGlobalStyle`
+@font-face {
+    font-family: "Gand-Regular";
+    src: local("Ghandi Sans Regular"), local("GandhiSansRegular"), url(${GhandSansRegular})
+  }
+
+  @font-face {
+    font-family: "Gand-Bold";
+    src: local("Ghandi Sans Bold"), local("GandhiSansBold"), url(${GhandSansBold})
+  }
+
 html {
   line-height: 1.15; 
   -webkit-text-size-adjust: 100%; 
@@ -144,15 +157,4 @@ template {
 [hidden] {
   display: none;
 }
-
-@font-face {
-    font-family: "Gand-regular";
-    src: url("fonts/GandhiSans-Regular.otf") format("opentype");
-    font-weight: normal;
-    font-style: normal;
-  }
-
-  body {
-    font-family: "Gand-regular", sans-serif;
-  }
 `
